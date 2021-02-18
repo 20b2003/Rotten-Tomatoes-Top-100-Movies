@@ -2,19 +2,22 @@ TOP 100 MOVIES OF ALL TIME – ROTTEN TOMATOES
 
 
 MAIN CONTENT
-•	SUMMARY
-•	PYTHON IMPORT MODULE
-•	CODE EXPLANATION
-•	OUTPUT
+
+- SUMMARY
+- PYTHON IMPORT MODULE
+- CODE EXPLANATION
+- OUTPUT
 
 
 SUMMARY
+
 This task consists of extracting data from a website, restructure the format, clean the HTML tags and convert it into a csv. file. This can be known as web scrapping.
 The website to do web scrapping for this task is: https://www.rottentomatoes.com/top/bestofrt/
 What I do is write down the code that search the contents from a table in a webpage, and storing that contents by appending in a csv file. It’s also removed the \n character while copying contents. It also searches for tr and td tags, that means searching an HTML document.
 
 
 PYTHON IMPORT MODULE
+
 1.	import requests
 Requests module allows you to send HTTP requests using Python. The HTTP request returns a Response Object with all the response data (content, encoding, status, etc).
 2.	import pandas as pd
@@ -24,6 +27,7 @@ Beautiful Soup is a Python library for pulling data out of HTML and XML files. I
  
 
 CODE EXPLANATION
+
 url = requests.get('https://www.rottentomatoes.com/top/bestofrt/')                      
 - Grab the contents of the URL
 
@@ -78,7 +82,7 @@ new_table.to_csv(file, header=['Rank', 'Rating', 'Title', 'No_of_Reviews'], inde
 
 
 OUTPUT
-    0	1	2	                                        3
+
 0	1.	96%	Black Panther (2018)	                    518
 1	2.	98%	Parasite (Gisaengchung) (2019)	            457
 2	3.	94%	Avengers: Endgame (2019)	                537
